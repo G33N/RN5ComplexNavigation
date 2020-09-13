@@ -14,6 +14,18 @@ export const HomeScreen = ({navigation}: any) => {
         title="Go to post"
         onPress={() => navigation.navigate('PostDetail')}
       />
+      <Button
+        title="Go to notification detail    "
+        onPress={() => navigation.navigate('NotificationDetail')}
+      />
+    </View>
+  );
+};
+
+export const NotificationDetailScreen = ({navigation}: any) => {
+  return (
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text>NOTIFICATION DETAIL!</Text>
     </View>
   );
 };
@@ -23,6 +35,10 @@ export const HomeStackScreen = () => {
     <HomeStack.Navigator screenOptions={{headerShown: true}}>
       <HomeStack.Screen name="Home" component={HomeScreen} />
       <HomeStack.Screen name="PostDetail" component={DetailScreen} />
+      <HomeStack.Screen
+        name="NotificationDetail"
+        component={NotificationDetailScreen}
+      />
     </HomeStack.Navigator>
   );
 };
