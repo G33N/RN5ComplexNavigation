@@ -19,6 +19,15 @@ import {PostStackScreen} from './screens/post';
 
 const Tab = createBottomTabNavigator();
 
+export type AppRouterParamList = {
+  Home: undefined;
+  Post: undefined;
+};
+
+export type RouterParamList = {
+  App: {screen: keyof AppRouterParamList};
+};
+
 const linking = {
   prefixes: ['https://rn5complexnavigation.com', 'rn5complexnavigation://'],
   config: {

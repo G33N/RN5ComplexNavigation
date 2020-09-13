@@ -1,12 +1,33 @@
 import * as React from 'react';
 import {Text, View, Button} from 'react-native';
-import {createStackNavigator} from '@react-navigation/stack';
-
+import {
+  createStackNavigator,
+  StackNavigationProp,
+} from '@react-navigation/stack';
+import {CompositeNavigationProp} from '@react-navigation/native';
+import {RouterParamList, AppRouterParamList} from '../App';
 import {DetailScreen} from './post';
 
 const HomeStack = createStackNavigator();
+// TODO: migrate to navigation folder
+export type HomeRouterParamList = {
+  Home: undefined;
+  PostDetail: undefined;
+  NotificationDetail: undefined;
+};
+// screen
+type HomeScreenNavigationProp = CompositeNavigationProp<
+  StackNavigationProp<HomeRouterParamList, 'Home'>,
+  CompositeNavigationProp<
+    StackNavigationProp<AppRouterParamList>,
+    StackNavigationProp<RouterParamList>
+  >
+>;
+export interface HomeScreenProps {
+  navigation: HomeScreenNavigationProp;
+}
 
-export const HomeScreen = ({navigation}: any) => {
+export const HomeScreen = ({navigation}: HomeScreenProps) => {
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Text>HOME!</Text>
