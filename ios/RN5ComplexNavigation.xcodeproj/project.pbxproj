@@ -178,7 +178,6 @@
 				04BEC1C185D5EB21AF79D83E /* Pods-RN5ComplexNavigation-RN5ComplexNavigationTests.debug.xcconfig */,
 				E3D325DC87C6088F9070B9F4 /* Pods-RN5ComplexNavigation-RN5ComplexNavigationTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -602,7 +601,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rn5complexnavigation;
 				PRODUCT_NAME = RN5ComplexNavigation;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -624,7 +623,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rn5complexnavigation;
 				PRODUCT_NAME = RN5ComplexNavigation;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
